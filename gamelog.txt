@@ -1,0 +1,688 @@
+[36mConnecting to: game.siggame.io:3000[0m
+[36mIn Lobby for game "Stardash" in session "FlatEarthSquad".[0m
+[32mGame is starting.[0m
+[33mInvalid: You must spawn units on your planet![0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #230 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #231 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m
+[33mInvalid: Unit #232 cannot do anything else as it is dashing or mining.[0m[36mConnecting to: game.siggame.io:3000[0m
+[36mIn Lobby for game "Stardash" in session "FlatEarthSquad".[0m
+[32mGame is starting.[0m
+[33mInvalid: Unit #219 can only move 0 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 0 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 0 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #221 can only move 64 distance![0m
+[33mInvalid: Unit #221 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #219 can only move 64 distance![0m
+[33mInvalid: Unit #219 is too far away from Body #10 to mine![0m
+[33mInvalid: Unit #220 can only move 64 distance![0m
+[33mInvalid: Unit #220 is too far away from Body #10 to mine![0m[36mConnecting to: game.siggame.io:3000[0m
+[36mConnecting to: game.siggame.io:3000[0m
+[36mIn Lobby for game "Stardash" in session "FlatEarthSquad".[0m
+[32mGame is starting.[0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m
+[33mInvalid: Unit #237 can only move 64 distance![0m

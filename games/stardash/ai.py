@@ -113,7 +113,7 @@ class AI(BaseAI):
         """
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
-        print("Turn start: "+ str(self._game.current_turn))
+        print("-------------- Turn start: "+ str(self._game.current_turn) + " --------------")
 
         #assign target variable
         target = self._player.home_base
@@ -124,80 +124,108 @@ class AI(BaseAI):
         
         for _ in bodies:
             if _.body_type == "asteroid":
-                if _.material_type == 'mythicite':
+                if _.material_type == 'legendarium':
                     if self._toMine == None:
                         self._toMine = _
-                    # else:
-                    #     prior = self._toMine
                         
                     if self._toMine != None:
-                        #dist = self._player.home_base.x
-                        #Distance from the base to the astroid
                         newdist = self.distance(_.x, _.y, self._player.home_base.x, self._player.home_base.y)
                         olddist = self.distance(self._toMine.x, self._toMine.y, self._player.home_base.x, self._player.home_base.y)
                         if newdist < olddist:
                             self._toMine = _
-                        """if dist - _.x < dist - self._toMine.x:
-                            if dist - _.y < dist - self._toMine.y:
-                                self._toMine = _
-                            else:
-                                self._toMine = prior
-                        """
-
         #Parse Units
         #Can optimize movement with range
         units = self._game.units
-        
+
         for _ in units:
             if _.owner == self._player:
                 if _.job.title == "miner":
-                    if _.genarium == 0 and _.rarium == 0 and _.legendarium == 0 and _.mythicite == 0:
-                        target = self._toMine
-                        if self._toMine.amount == 0:
-                            self._toMine = None
-                            target = self._player.home_base
+                    print("Miner Turn")
+                    print("Current Energy: " + str(_.energy))
+                    
+                    target = None
+                    isDash = False
+                    withinReach = False
 
-                    if target.body_type == "planet":
+                    if _.genarium + _.rarium + _.legendarium + _.mythicite == 0:
+                        target = self._toMine
+                    elif _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
+                        target = self._player.home_base
+                    else:
+                        target = self._player.home_base
+
+                    if target != None:
+                        print("Targeting:" + str(target.body_type) + " at X:" + str(target.x) + ", Y:" + str(target.y))
                         if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
                             if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
-                                print("I have reached the Base, proximety depositing now.")
-                            else:
-                                _.dash(target.x, target.y)
-                                print("Dashing back to Base X:" + str(target.x) + ",Y:" + str(target.y))
-                                print("I am currently at X:" + str(_.x) + ", Y:" + str(_.y))
-                         
-                    movX = (target.x - _.x)
-                        
-                    movY = (target.y - _.y)
+                                print("WithinReach of Target.")
+                                withinReach = True
 
-                    if math.fabs(movX) > _.moves:
-                        movX = math.copysign(_.moves, movX)
-                        
-                    if _.safe(_.x + movX, _.y) == False:
-                        _.dash(target.x, target.y)
-                        print("Sun encountered, dashing.")
-                    elif movX != 0.0:    
-                        _.move(_.x + movX, _.y)
-                        print("Moving to X:" + str(_.x + movX))
-
-                    if math.fabs(movY) > _.moves:
-                        movY = math.copysign(_.moves, movY)
-
-                    if _.safe(_.x, _.y + movY) == False:
-                        _.dash(target.x, target.y)
-                        print("Sun encountered, dashing.")
-                    elif movY != 0.0: 
-                        _.move(_.x, _.y + movY)
-                        print("Moving to Y:" + str(_.y + movY))
-                     
-                    if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
-                        if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+                        if withinReach == True:
                             if target.body_type == "asteroid":
                                 _.mine(target)
                                 print("Mining")
+                                
+                        dist = self.distance(_.x, _.y, target.x, target.y)
 
-                    if _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
-                        target = self._player.home_base
+                        if _.acted == False:
+                            if withinReach == False:
+                                #Energy > DashesUsedForDistance + OneEnergyUnused
+                                if _.energy > ((dist/50) + 1):
+                                    #Distance/DashPerEnergy > 64 + (64/DashPerEnergy)
+                                    if dist/50 > 1:
+                                        if _.safe(target.x, target.y):
+                                            print("Dashing from X:" + str(_.x) + ", Y:" + str(_.y))
+                                            _.dash(target.x, target.y)
+                                            isDash = True
+                                            print("Dashing to X:" + str(target.x) + ", Y:" + str(target.y))
+                                        else:
+                                            print("Dashing from X:" + str(_.x) + ", Y:" + str(_.y))
+                                            _.dash(target.x - 0.01, target.y - 0.01)
+                                            isDash = True
+                                            print("Dashing to X:" + str(target.x) + ", Y:" + str(target.y))
+
+                            if isDash == False:
+                                movX = (target.x - _.x)
+                                    
+                                movY = (target.y - _.y)
+
+                                if math.fabs(movX) > _.moves:
+                                    movX = math.copysign(_.moves, movX)
+                                    
+                                if _.safe(_.x + movX, _.y):
+                                    _.move(_.x + movX, _.y)
+                                    print("Moving to X:" + str(_.x + movX) + " at Rate:" + str(movX))
+                                else:
+                                    _.move(_.x + (movX - math.copysign(.01, movX)), _.y)
+                                    print("Encountered Sun Rerouting.")
+                                    print("Moving to X:" + str(_.x - (math.copysign(.01, movX))) + " at Rate:" + str(movX))
+
+                                if math.fabs(movY) > _.moves:
+                                    movY = math.copysign(_.moves, movY)
+                                        
+                                if _.safe(_.x, _.y + movY):
+                                    _.move(_.x, _.y + movY)
+                                    print("Moving to Y:" + str(_.y + movY) + " at Rate:" + str(movY))
+                                else:
+                                    _.move(_.x, _.y + (movY - math.copysign(.01, movY)))
+                                    print("Encountered Sun Rerouting.")
+                                    print("Moving to Y:" + str(_.y + (movY - math.copysign(.01, movY))) + " at Rate:" + str(movY))
+
+                            if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+                                if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+                                    print("WithinReach of Target.")
+                                    withinReach = True
+                                    
+                            if withinReach == True:
+                                if target.body_type == "asteroid":
+                                    _.mine(target)
+                                    print("Mining")
+                                if target.body_type == "planet":
+                                    print("I have reached the Base. Proceding back to Mining.")
+                    else:
+                        print("No Target for Miner Selected")
+                        
         return True
         # <<-- /Creer-Merge: runTurn -->>
 
