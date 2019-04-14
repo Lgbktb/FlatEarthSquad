@@ -2,6 +2,7 @@
 
 from joueur.base_ai import BaseAI
 import math
+import copy
 
 # <<-- Creer-Merge: imports -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
 # you can add additional import(s) here
@@ -43,7 +44,45 @@ class AI(BaseAI):
             game. You can initialize your AI here.
         """
         # <<-- Creer-Merge: start -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-        # replace with your start logic
+        self._ourMiners = []
+        self._enemyMiners = []
+        self._none = [] #Debug purposes, should be empty
+        self._genarium = []
+        self._rarium = []
+        self._legendarium = []
+        self._mythicite = []
+        self._theSun = self._game.bodies[2]
+
+        #Find our Miners
+        for i in self._game.units:
+            if i.owner == self._player:
+                self._ourMiners.append(i)
+            else:
+                self._enemyMiners.append(i)
+        #print(str(self._ourMiners))
+
+        #Identify Celestial Bodies
+        for i in self._game.bodies:
+            if i.body_type == 'asteroid':
+                if i.material_type == "none":
+                    self._none.append(i)
+                elif i.material_type == "genarium":
+                    self._genarium.append(i)
+                elif i.material_type == "rarium":
+                    self._rarium.append(i)
+                elif i.material_type == "legendarium":
+                    self._legendarium.append(i);
+                elif i.material_type == "mythicite":
+                    self._mythicite.append(i);
+                else:
+                    print("Unknown Planet Type")
+        #print("none: " + str(self._none))
+        #print("generium: " + str(self._genarium))
+        #print("rarium: " + str(self._rarium))
+        #print("legendarium: " + str(self._legendarium))
+        #print("mythicite: " + str(self._mythicite))
+
+        
         # <<-- /Creer-Merge: start -->>
 
     def game_updated(self):
@@ -126,5 +165,83 @@ class AI(BaseAI):
         # <<-- /Creer-Merge: runTurn -->>
 
     # <<-- Creer-Merge: functions -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-    # if you need additional functions for your AI you can add them here
+    def distance(self, x1, y1, x2, y2):
+        """ Returns the Euclidian distance between two points.
+
+            Args:
+                x1 (int): The x coordinate of the first point.
+                y1 (int): The y coordinate of the first point.
+                x2 (int): The x coordinate of the second point.
+                y2 (int): The y coordinate of the second point.
+
+            Returns:
+                float: The distance between the two points.
+        """
+        return math.sqrt((x1 - x2) ** 2.0 + (y1 - y2) ** 2.0)
+
+    def find_dash(self, unit, x, y):
+        """ This is an EXTREMELY basic pathfinding function to move your ship until it can dash to your target.
+            You REALLY should improve this functionality or make your own new one, since this is VERY basic and inefficient.
+            Like, for real.
+
+            Args:
+                unit (unit): The unit that will be moving.
+                x (int): The x coordinate of the destination.
+                y (int): The y coordinate of the destination.
+        """
+        # Gets the sun from the list of bodies.
+        sun = self.game.bodies[2]
+
+        while unit.moves >= 1:
+            if unit.safe(x, y) and unit.energy >= math.ceil((self.distance(unit.x, unit.y, x, y) / self.game.dash_distance) * self.game.dash_cost):
+                # Dashes if it is safe to dash to the point and we have enough energy to dash there.
+                unit.dash(x, y)
+
+                # Breaks out of the loop since we can't do anything else now.
+                break
+            else:
+                # Otherwise tries moving towards the target.
+
+                # The x and y modifiers for movement.
+                x_mod = 0
+                y_mod = 0
+
+                if unit.x < x or (y < sun.y and unit.y > sun.y or y > sun.y and unit.y < sun.y) and x > sun.x:
+                    # Move to the right if the destination is to the right or on the other side of the sun on the right side.
+                    x_mod = 1
+                elif unit.x > x or (y < sun.y and unit.y > sun.y or y > sun.y and unit.y < sun.y) and x < sun.x:
+                    # Move to the left if the destination is to the left or on the other side of the sun on the left side.
+                    x_mod = -1
+
+                if unit.y < y or (x < sun.x and unit.x > sun.x or x > sun.x and unit.x < sun.x) and y > sun.y:
+                    # Move down if the destination is down or on the other side of the sun on the lower side.
+                    y_mod = 1
+                elif unit.y > y or (x < sun.x and unit.x > sun.x or x > sun.x and unit.x < sun.x) and y < sun.y:
+                    # Move up if the destination is up or on the other side of the sun on the upper side.
+                    y_mod = -1
+
+                if x_mod != 0 and y_mod != 0 and not unit.safe(unit.x + x_mod, unit.y + y_mod):
+                    # Special case if we cannot safely move diagonally.
+                    if unit.safe(unit.x + x_mod, unit.y):
+                        # Only move horizontally if it is safe.
+                        y_mod = 0
+                    elif unit.safe(unit.x, unit.y + y_mod):
+                        # Only move vertically if it is safe.
+                        x_mod = 0
+
+                if unit.moves < math.sqrt(2) and x_mod != 0 and y_mod != 0:
+                    # Special case if we only have 1 move left and are trying to move 2.
+                    if unit.safe(unit.x + x_mod, unit.y):
+                        y_mod = 0
+                    elif unit.safe(unit.x, unit.y + y_mod):
+                        x_mod = 0
+                    else:
+                        break
+
+                if (x_mod != 0 or y_mod != 0) and (math.sqrt(math.pow(x_mod, 2) + math.pow(y_mod, 2)) >= unit.moves):
+                    # Tries to move if either of the modifiers is not zero (we are actually moving somewhere).
+                    unit.move(unit.x + x_mod, unit.y + y_mod)
+                else:
+                    # Breaks otherwise, since something probably went wrong.
+                    break
     # <<-- /Creer-Merge: functions -->>
