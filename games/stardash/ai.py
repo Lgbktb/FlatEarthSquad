@@ -60,10 +60,13 @@ class AI(BaseAI):
         for i in self._game.units:
             if i.owner == self._player:
                 self._ourMiners.append(i)
+                self._moneyMiners.append(i)
+                """
                 if self._mythiciteMiners: #One Mythicite Miner, 2 moneyMiners
                     self._moneyMiners.append(i)
                 else: 
                     self._mythiciteMiners.append(i)
+                """
         #print(str(self._ourMiners))
 
         #Identify Celestial Bodies
@@ -128,8 +131,6 @@ class AI(BaseAI):
             target = self._moneyTransporters[0]
         else:
             target = self._player.home_base
-        
-
         for i in self._moneyMiners:
             toMine = self.getTarget(i, self._legendarium)
             self.moveMiner(i, target, toMine)
@@ -213,7 +214,7 @@ class AI(BaseAI):
     # <<-- Creer-Merge: functions -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
     def spawnUnits(self):
         minMoneyMiners = 3
-        maxMoneyMiners = 10
+        maxMoneyMiners = 100
         minMythiciteMiners = 3
         maxMythiciteMiners = 10
         while self._player.money > 0:
@@ -225,13 +226,15 @@ class AI(BaseAI):
                 else:
                     print("My Shit doesn't work, the miner isn't the last unit")
             # MoneyTransport
-            elif self._player.money > 75 and not self._moneyTransporters and len(self._moneyMiners) > minMoneyMiners:
+            """elif self._player.money > 75 and not self._moneyTransporters and len(self._moneyMiners) > minMoneyMiners:
                 self._player.home_base.spawn(self._player.home_base.x, self._player.home_base.y, 'transport')
                 if self._game.units[len(self.game.units)-1].job.title == 'transport' :
                     self._moneyTransporters.append(self._game.units[len(self.game.units)-1])
                 else:
                     print("My Shit doesn't work, the transport isn't the last unit")
+            """
             # MythiciteMiners(Min)
+            """
             elif self._player.money > 150 and len(self._mythiciteMiners) < minMythiciteMiners:
                 self._player.home_base.spawn(self._player.home_base.x, self._player.home_base.y, 'miner')
                 if self._game.units[len(self.game.units)-1].job.title == 'miner' :
@@ -239,19 +242,22 @@ class AI(BaseAI):
                 else:
                     print("My Shit doesn't work, the miner isn't the last unit")
             # MythiciteTransport
+            
             elif self._player.money > 75 and not self._mythiciteTransporters and len(self._mythiciteMiners) > minMythiciteMiners:
                 self._player.home_base.spawn(self._player.home_base.x, self._player.home_base.y, 'transport')
                 if self._game.units[len(self.game.units)-1].job.title == 'transport' :
                     self._mythiciteTransporters.append(self._game.units[len(self.game.units)-1])
                 else:
                     print("My Shit doesn't work, the transport isn't the last unit")
+            """
             #MaxMoneyMiners
-            elif self._player.money > 150 and len(self._moneyMiners) < maxMoneyMiners:
+            if self._player.money > 150 and len(self._moneyMiners) < maxMoneyMiners:
                 self._player.home_base.spawn(self._player.home_base.x, self._player.home_base.y, 'miner')
                 if self._game.units[len(self.game.units)-1].job.title == 'miner' :
                     self._moneyMiners.append(self._game.units[len(self.game.units)-1])
                 else:
                     print("My Shit doesn't work, the miner isn't the last unit")
+            """
             #MaxMythiciteMiners
             elif self._player.money > 150 and len(self._mythiciteMiners) < maxMythiciteMiners:
                 self._player.home_base.spawn(self._player.home_base.x, self._player.home_base.y, 'miner')
@@ -259,7 +265,8 @@ class AI(BaseAI):
                     self._mythiciteMiners.append(self._game.units[len(self.game.units)-1])
                 else:
                     print("My Shit doesn't work, the miner isn't the last unit")
-            elif False: #The enemy has spawned enemy-like units 
+            """
+            if False: #The enemy has spawned enemy-like units 
                 pass #Create the Anti-Fuck Squad
             else:
                 break
@@ -267,59 +274,148 @@ class AI(BaseAI):
     
     def moveMiner(self, _, depotLoc, toMine):
         target = depotLoc
-        if _.genarium == 0 and _.rarium == 0 and _.legendarium == 0 and _.mythicite == 0:
-            target = toMine
-            if toMine.amount == 0:
-                toMine = None
-                target = self._player.home_base 
-        if target.game_object_name == "Body":
-            if target.body_type == "planet":
-                if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
-                    if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
-                        print("I have reached the Base, proximety depositing now.")
-                    else:
-                        _.dash(target.x, target.y)
-                        print("Dashing back to Base X:" + str(target.x) + ",Y:" + str(target.y))
-                        print("I am currently at X:" + str(_.x) + ", Y:" + str(_.y))
-        if target.game_object_name == "Unit":
-            if target.job.title == "transport":
-                #target.job
-                pass
-        
-        movX = (target.x - _.x)
-                       
-        movY = (target.y - _.y)
-
-        if math.fabs(movX) > _.moves:
-            movX = math.copysign(_.moves, movX)
+        if _.job.title == "miner":
+                    print("Miner Turn")
+                    print("Current Energy: " + str(_.energy))
                     
-        if _.safe(_.x + movX, _.y) == False:
-            _.dash(target.x, target.y)
-            print("Sun encountered, dashing.")
-        elif movX != 0.0:    
-            _.move(_.x + movX, _.y)
-            #print("Moving to X:" + str(_.x + movX))
+                    target = None
+                    isDash = False
+                    withinReach = False
 
-        if math.fabs(movY) > _.moves:
-            movY = math.copysign(_.moves, movY)
+                    if _.genarium + _.rarium + _.legendarium + _.mythicite == 0:
+                        target = toMine
+                    elif _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
+                        target = self._player.home_base
+                    else:
+                        target = self._player.home_base
 
-        if _.safe(_.x, _.y + movY) == False:
-            _.dash(target.x, target.y)
-            print("Sun encountered, dashing.")
-        elif movY != 0.0: 
-            _.move(_.x, _.y + movY)
-            #print("Moving to Y:" + str(_.y + movY))
-                     
-        if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
-            if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
-                if target.game_object_name == "Body":
-                    if target.body_type == "asteroid":
-                        _.mine(target)
-                        print("Mining")
+                    if target != None:
+                        print("Targeting:" + str(target.body_type) + " at X:" + str(target.x) + ", Y:" + str(target.y))
+                        if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+                            if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+                                print("WithinReach of Target.")
+                                withinReach = True
 
-        if _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
-            target = self._player.home_base
+                        if withinReach == True:
+                            if target.body_type == "asteroid":
+                                _.mine(target)
+                                print("Mining")
+                                
+                        dist = self.distance(_.x, _.y, target.x, target.y)
+
+                        if _.acted == False:
+                            if withinReach == False:
+                                #Energy > DashesUsedForDistance + OneEnergyUnused
+                                if _.energy > ((dist/50) + 1):
+                                    #Distance/DashPerEnergy > 64 + (64/DashPerEnergy)
+                                    if dist/50 > 1:
+                                        if _.safe(target.x, target.y):
+                                            print("Dashing from X:" + str(_.x) + ", Y:" + str(_.y))
+                                            _.dash(target.x, target.y)
+                                            isDash = True
+                                            print("Dashing to X:" + str(target.x) + ", Y:" + str(target.y))
+                                        else:
+                                            print("Dashing from X:" + str(_.x) + ", Y:" + str(_.y))
+                                            _.dash(target.x - 0.01, target.y - 0.01)
+                                            isDash = True
+                                            print("Dashing to X:" + str(target.x) + ", Y:" + str(target.y))
+
+                            if isDash == False:
+                                movX = (target.x - _.x)
+                                    
+                                movY = (target.y - _.y)
+
+                                if math.fabs(movX) > _.moves:
+                                    movX = math.copysign(_.moves, movX)
+                                    
+                                if _.safe(_.x + movX, _.y):
+                                    _.move(_.x + movX, _.y)
+                                    print("Moving to X:" + str(_.x + movX) + " at Rate:" + str(movX))
+                                else:
+                                    _.move(_.x + (movX - math.copysign(.01, movX)), _.y)
+                                    print("Encountered Sun Rerouting.")
+                                    print("Moving to X:" + str(_.x - (math.copysign(.01, movX))) + " at Rate:" + str(movX))
+
+                                if math.fabs(movY) > _.moves:
+                                    movY = math.copysign(_.moves, movY)
+                                        
+                                if _.safe(_.x, _.y + movY):
+                                    _.move(_.x, _.y + movY)
+                                    print("Moving to Y:" + str(_.y + movY) + " at Rate:" + str(movY))
+                                else:
+                                    _.move(_.x, _.y + (movY - math.copysign(.01, movY)))
+                                    print("Encountered Sun Rerouting.")
+                                    print("Moving to Y:" + str(_.y + (movY - math.copysign(.01, movY))) + " at Rate:" + str(movY))
+
+                            if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+                                if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+                                    print("WithinReach of Target.")
+                                    withinReach = True
+                                    
+                            if withinReach == True:
+                                if target.body_type == "asteroid":
+                                    _.mine(target)
+                                    print("Mining")
+                                if target.body_type == "planet":
+                                    print("I have reached the Base. Proceding back to Mining.")
+                    else:
+                        print("No Target for Miner Selected")
         return target
+
+
+        # if _.genarium == 0 and _.rarium == 0 and _.legendarium == 0 and _.mythicite == 0:
+        #     target = toMine
+        #     if toMine.amount == 0:
+        #         toMine = None
+        #         target = self._player.home_base 
+        # if target.game_object_name == "Body":
+        #     if target.body_type == "planet":
+        #         if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+        #             if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+        #                 print("I have reached the Base, proximety depositing now.")
+        #             else:
+        #                 _.dash(target.x, target.y)
+        #                 print("Dashing back to Base X:" + str(target.x) + ",Y:" + str(target.y))
+        #                 print("I am currently at X:" + str(_.x) + ", Y:" + str(_.y))
+        # if target.game_object_name == "Unit":
+        #     if target.job.title == "transport":
+        #         #target.job
+        #         pass
+        
+        # movX = (target.x - _.x)
+                       
+        # movY = (target.y - _.y)
+
+        # if math.fabs(movX) > _.moves:
+        #     movX = math.copysign(_.moves, movX)
+                    
+        # if _.safe(_.x + movX, _.y) == False:
+        #     _.dash(target.x, target.y)
+        #     print("Sun encountered, dashing.")
+        # elif movX != 0.0:    
+        #     _.move(_.x + movX, _.y)
+        #     #print("Moving to X:" + str(_.x + movX))
+
+        # if math.fabs(movY) > _.moves:
+        #     movY = math.copysign(_.moves, movY)
+
+        # if _.safe(_.x, _.y + movY) == False:
+        #     _.dash(target.x, target.y)
+        #     print("Sun encountered, dashing.")
+        # elif movY != 0.0: 
+        #     _.move(_.x, _.y + movY)
+        #     #print("Moving to Y:" + str(_.y + movY))
+                     
+        # if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+        #     if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+        #         if target.game_object_name == "Body":
+        #             if target.body_type == "asteroid":
+        #                 _.mine(target)
+        #                 print("Mining")
+
+        # if _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
+        #     target = self._player.home_base
+        # return target
 
 
     def moveTransport(self, _, target, toMine):
