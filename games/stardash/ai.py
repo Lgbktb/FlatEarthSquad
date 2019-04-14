@@ -72,7 +72,7 @@ class AI(BaseAI):
         """
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
-        Body.spawn(0,0,"miner")
+        games.stardash.body.Body.spawn(0,0,"miner")
         return True
         # <<-- /Creer-Merge: runTurn -->>
 
