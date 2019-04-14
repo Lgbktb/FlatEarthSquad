@@ -110,7 +110,7 @@ class AI(BaseAI):
             bool: Represents if you want to end your turn. True means end your turn, False means to keep your turn going and re-call this function.
         """
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-        print("Turn start")
+        print("Turn start: "+ str(self._game.current_turn))
         potentialTargets = copy.deepcopy(self._legendarium) # All potential Targets for each of ourMiners
         lockedTargets = [] # Locked target for each Miner, corresponding to each miner (lockedTargets[0] goes with _ourMiners[0])
         for i in self._ourMiners:
@@ -127,17 +127,16 @@ class AI(BaseAI):
                 potentialTargets.remove(closestLegendarium)
                 
                 if(i.job.carry_limit == i.legendarium):
-                    print("Returning to base")
+                    print(str(i) + " Returning to base")
                     #Move Toward Home base
-                    self.sendHome(i)
-                    #i.dash(self._player.home_base.x, self._player.home_base.y)
+                    self.find_dash(i, self._player.home_base.x, self._player.home_base.y)
 
                 # Attempt to mine
                 if(i.mine(closestLegendarium)):
-                    print("MINING SUCCESSS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                    print("MINING SUCCESSS")
                 else:
                     #Attempt to Dash to Location
-                    i.dash(closestLegendarium.x, closestLegendarium.y)
+                    self.find_dash(i, closestLegendarium.x, closestLegendarium.y)
             else:
                 print("No Potential Targets :(")
         return True
@@ -146,31 +145,67 @@ class AI(BaseAI):
     # <<-- Creer-Merge: functions -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
     def distance(self, x1, x2, y1, y2):
         return math.sqrt((x2 - x1 )**2 + (y2 - y1)**2)
-    def moveTo(self, obj, x, y):
-        #Moves obj towars coordinates    x, y
-        #Doesn't Work at all
-        trix = abs(x-obj.x)
-        triy = abs(y-obj.y)
-        
-        dist = self.distance(obj.x, trix, obj.y, triy)
-        ix = obj.moves * trix / dist
-        iy = obj.moves * triy / dist
-        print("Dist: " + str(dist))
-        print("Movement: " + str(obj.moves))
-        print("Ix: " + str(ix) + ": IY: " + str(iy) )
-        obj.move(obj.x+ix, obj.y+iy)
-    
-    def sendHome(self, obj):
-        #Moves object toward home_base
-        #Doesn't work at all
-        print("SEnding em on home")
-        homeX = self.player.home_base.x
-        homeY = self.player.home_base.y
-        dist = self.distance(homeX, obj.x, homeY, obj.y)
-        myMoves = obj.moves / 2 #TEsting Only
 
-        ix = myMoves*(homeX-obj.x)/dist
-        iy = myMoves*(homeY-obj.y)/dist
-        print("Ix: " + str(ix) + ": IY: " + str(iy) )
-        obj.move(obj.x+ix, obj.y+iy)
+    def find_dash(self, unit, x, y):
+        """ This is an EXTREMELY basic pathfinding function to move your ship until it can dash to your target.
+            You REALLY should improve this functionality or make your own new one, since this is VERY basic and inefficient.
+            Like, for real.
+
+            Args:
+                unit (unit): The unit that will be moving.
+                x (int): The x coordinate of the destination.
+                y (int): The y coordinate of the destination.
+        """
+        while unit.moves >= 1:
+            if unit.safe(x, y) and unit.energy >= math.ceil((self.distance(unit.x, unit.y, x, y) / self.game.dash_distance) * self.game.dash_cost):
+                # Dashes if it is safe to dash to the point and we have enough energy to dash there.
+                unit.dash(x, y)
+
+                # Breaks out of the loop since we can't do anything else now.
+                break
+            else:
+                # Otherwise tries moving towards the target.
+
+                # The x and y modifiers for movement.
+                x_mod = 0
+                y_mod = 0
+
+                if unit.x < x or (y < self._theSun.y and unit.y > self._theSun.y or y > self._theSun.y and unit.y < self._theSun.y) and x > self._theSun.x:
+                    # Move to the right if the destination is to the right or on the other side of the self._theSun on the right side.
+                    x_mod = 1
+                elif unit.x > x or (y < self._theSun.y and unit.y > self._theSun.y or y > self._theSun.y and unit.y < self._theSun.y) and x < self._theSun.x:
+                    # Move to the left if the destination is to the left or on the other side of the self._theSun on the left side.
+                    x_mod = -1
+
+                if unit.y < y or (x < self._theSun.x and unit.x > self._theSun.x or x > self._theSun.x and unit.x < self._theSun.x) and y > self._theSun.y:
+                    # Move down if the destination is down or on the other side of the self._theSun on the lower side.
+                    y_mod = 1
+                elif unit.y > y or (x < self._theSun.x and unit.x > self._theSun.x or x > self._theSun.x and unit.x < self._theSun.x) and y < self._theSun.y:
+                    # Move up if the destination is up or on the other side of the self._theSun on the upper side.
+                    y_mod = -1
+
+                if x_mod != 0 and y_mod != 0 and not unit.safe(unit.x + x_mod, unit.y + y_mod):
+                    # Special case if we cannot safely move diagonally.
+                    if unit.safe(unit.x + x_mod, unit.y):
+                        # Only move horizontally if it is safe.
+                        y_mod = 0
+                    elif unit.safe(unit.x, unit.y + y_mod):
+                        # Only move vertically if it is safe.
+                        x_mod = 0
+
+                if unit.moves < math.sqrt(2) and x_mod != 0 and y_mod != 0:
+                    # Special case if we only have 1 move left and are trying to move 2.
+                    if unit.safe(unit.x + x_mod, unit.y):
+                        y_mod = 0
+                    elif unit.safe(unit.x, unit.y + y_mod):
+                        x_mod = 0
+                    else:
+                        break
+
+                if (x_mod != 0 or y_mod != 0) and (math.sqrt(math.pow(x_mod, 2) + math.pow(y_mod, 2)) >= unit.moves):
+                    # Tries to move if   either of the modifiers is not zero (we are actually moving somewhere).
+                    unit.move(unit.x + x_mod, unit.y + y_mod)
+                else:
+                    # Breaks otherwise, since something probably went wrong.
+                    break
     # <<-- /Creer-Merge: functions -->>
