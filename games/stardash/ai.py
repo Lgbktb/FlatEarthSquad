@@ -77,15 +77,27 @@ class AI(BaseAI):
 
         #assign target variable
         target = self._player.home_base
+        self._toMine = None
 
         #Parse Bodies
         bodies = self._game.bodies
         
         for _ in bodies:
-            if self._target == None:
-                if _.body_type == "asteroid":
-                    if _.material_type == 'genarium':
+            if _.body_type == "asteroid":
+                if _.material_type == 'legendarium':
+                    if self._toMine == None:
                         self._toMine = _
+                    else:
+                        prior = self._toMine
+                        
+                    if self._toMine != None:
+                        dist = self._player.home_base.x
+                        if dist - _.x < dist - self._toMine.x:
+                            if dist - _.y < dist - self._toMine.y:
+                                self._toMine = _
+                            else:
+                                self._toMine = prior
+                            
 
         #Parse Units
         #Can optimize movement with range
@@ -99,26 +111,45 @@ class AI(BaseAI):
                         if self._toMine.amount == 0:
                             self._toMine = None
                             target = self._player.home_base
-                            
+
+                    if target.body_type == "planet":
+                        if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+                            if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+                                print("I have reached the Base, proximety depositing now.")
+                            else:
+                                _.dash(target.x, target.y)
+                                print("Dashing back to Base X:" + str(target.x) + ",Y:" + str(target.y))
+                                print("I am currently at X:" + str(_.x) + ", Y:" + str(_.y))
+                         
                     movX = (target.x - _.x)
                         
                     movY = (target.y - _.y)
 
                     if math.fabs(movX) > _.moves:
                         movX = math.copysign(_.moves, movX)
-                    if movX != 0.0:    
+                        
+                    if _.safe(_.x + movX, _.y) == False:
+                        _.dash(target.x, target.y)
+                        print("Sun encountered, dashing.")
+                    elif movX != 0.0:    
                         _.move(_.x + movX, _.y)
+                        print("Moving to X:" + str(_.x + movX))
 
                     if math.fabs(movY) > _.moves:
                         movY = math.copysign(_.moves, movY)
 
-                    if movY != 0.0: 
+                    if _.safe(_.x, _.y + movY) == False:
+                        _.dash(target.x, target.y)
+                        print("Sun encountered, dashing.")
+                    elif movY != 0.0: 
                         _.move(_.x, _.y + movY)
-                        
+                        print("Moving to Y:" + str(_.y + movY))
+                     
                     if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
                         if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
                             if target.body_type == "asteroid":
                                 _.mine(target)
+                                print("Mining")
 
                     if _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
                         target = self._player.home_base
