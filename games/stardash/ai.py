@@ -1,7 +1,8 @@
 # This is where you build your AI for the Stardash game.
 
+import math
+import copy
 from joueur.base_ai import BaseAI
-
 # <<-- Creer-Merge: imports -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
 # you can add additional import(s) here
 # <<-- /Creer-Merge: imports -->>
@@ -73,11 +74,11 @@ class AI(BaseAI):
                     self._mythicite.append(i);
                 else:
                     print("Unknown Planet Type")
-        print("none: " + str(self._none))
-        print("generium: " + str(self._genarium))
-        print("rarium: " + str(self._rarium))
-        print("legendarium: " + str(self._legendarium))
-        print("mythicite: " + str(self._mythicite))
+        #print("none: " + str(self._none))
+        #print("generium: " + str(self._genarium))
+        #print("rarium: " + str(self._rarium))
+        #print("legendarium: " + str(self._legendarium))
+        #print("mythicite: " + str(self._mythicite))
 
         
         # <<-- /Creer-Merge: start -->>
@@ -109,13 +110,67 @@ class AI(BaseAI):
             bool: Represents if you want to end your turn. True means end your turn, False means to keep your turn going and re-call this function.
         """
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-        # Put your game logic here for runTurn
+        print("Turn start")
+        potentialTargets = copy.deepcopy(self._legendarium) # All potential Targets for each of ourMiners
+        lockedTargets = [] # Locked target for each Miner, corresponding to each miner (lockedTargets[0] goes with _ourMiners[0])
+        for i in self._ourMiners:
+            
+            # Idendify closest Legendarium
+            if(potentialTargets): 
+                closestLegendarium = potentialTargets[0]
+                for j in potentialTargets:
+                    if (self.distance(j.x, i.x, j.y, i.y) < self.distance(closestLegendarium.x, i.x, closestLegendarium.y, i.y)): 
+                        closestLegendarium = j
+                # Set as Locked Target
+                lockedTargets.append(closestLegendarium)
+                # Remove chosen target from pool of potential targets
+                potentialTargets.remove(closestLegendarium)
+                
+                if(i.job.carry_limit == i.legendarium):
+                    print("Returning to base")
+                    #Move Toward Home base
+                    self.sendHome(i)
+                    #i.dash(self._player.home_base.x, self._player.home_base.y)
 
-
-
+                # Attempt to mine
+                if(i.mine(closestLegendarium)):
+                    print("MINING SUCCESSS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                else:
+                    #Attempt to Dash to Location
+                    i.dash(closestLegendarium.x, closestLegendarium.y)
+            else:
+                print("No Potential Targets :(")
         return True
         # <<-- /Creer-Merge: runTurn -->>
 
     # <<-- Creer-Merge: functions -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-    # if you need additional functions for your AI you can add them here
+    def distance(self, x1, x2, y1, y2):
+        return math.sqrt((x2 - x1 )**2 + (y2 - y1)**2)
+    def moveTo(self, obj, x, y):
+        #Moves obj towars coordinates    x, y
+        #Doesn't Work at all
+        trix = abs(x-obj.x)
+        triy = abs(y-obj.y)
+        
+        dist = self.distance(obj.x, trix, obj.y, triy)
+        ix = obj.moves * trix / dist
+        iy = obj.moves * triy / dist
+        print("Dist: " + str(dist))
+        print("Movement: " + str(obj.moves))
+        print("Ix: " + str(ix) + ": IY: " + str(iy) )
+        obj.move(obj.x+ix, obj.y+iy)
+    
+    def sendHome(self, obj):
+        #Moves object toward home_base
+        #Doesn't work at all
+        print("SEnding em on home")
+        homeX = self.player.home_base.x
+        homeY = self.player.home_base.y
+        dist = self.distance(homeX, obj.x, homeY, obj.y)
+        myMoves = obj.moves / 2 #TEsting Only
+
+        ix = myMoves*(homeX-obj.x)/dist
+        iy = myMoves*(homeY-obj.y)/dist
+        print("Ix: " + str(ix) + ": IY: " + str(iy) )
+        obj.move(obj.x+ix, obj.y+iy)
     # <<-- /Creer-Merge: functions -->>
