@@ -39,15 +39,47 @@ class AI(BaseAI):
         """ This is called once the game starts and your AI knows its player and
             game. You can initialize your AI here.
         """ 
+        # <<-- Creer-Merge: start -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
+        
         self._ourMiners = []
+        self._enemyMiners = []
+        self._none = [] #Debug purposes, should be empty
+        self._genarium = []
+        self._rarium = []
+        self._legendarium = []
+        self._mythicite = []
+        self._theSun = self._game.bodies[2]
+
         #Find our Miners
         for i in self._game.units:
             if i.owner == self._player:
                 self._ourMiners.append(i)
-        print(str(self._ourMiners))
+            else:
+                self._enemyMiners.append(i)
+        #print(str(self._ourMiners))
+
+        #Identify Celestial Bodies
+        for i in self._game.bodies:
+            if i.body_type == 'asteroid':
+                if i.material_type == "none":
+                    self._none.append(i)
+                elif i.material_type == "genarium":
+                    self._genarium.append(i)
+                elif i.material_type == "rarium":
+                    self._rarium.append(i)
+                elif i.material_type == "legendarium":
+                    self._legendarium.append(i);
+                elif i.material_type == "mythicite":
+                    self._mythicite.append(i);
+                else:
+                    print("Unknown Planet Type")
+        print("none: " + str(self._none))
+        print("generium: " + str(self._genarium))
+        print("rarium: " + str(self._rarium))
+        print("legendarium: " + str(self._legendarium))
+        print("mythicite: " + str(self._mythicite))
+
         
-        # <<-- Creer-Merge: start -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-        # replace with your start logic
         # <<-- /Creer-Merge: start -->>
 
     def game_updated(self):
@@ -76,17 +108,11 @@ class AI(BaseAI):
         Returns:
             bool: Represents if you want to end your turn. True means end your turn, False means to keep your turn going and re-call this function.
         """
-        print(self._ourMiners[0].moves)
-        if self._ourMiners[0].moves :
-            self._ourMiners[0].move(self._ourMiners[0].x+self._ourMiners[0].moves, self._ourMiners[0].y)
-
-        
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
-<<<<<<< HEAD
-=======
-        body.Body.spawn(0,0,"miner")
->>>>>>> 0dec73ee2b8d36f0f3be991124289145d280541a
+
+
+
         return True
         # <<-- /Creer-Merge: runTurn -->>
 
