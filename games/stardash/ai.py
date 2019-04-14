@@ -8,7 +8,6 @@ from joueur.base_ai import BaseAI
 
 class AI(BaseAI):
     """ The AI you add and improve code inside to play Stardash. """
-
     @property
     def game(self):
         """The reference to the Game instance this AI is playing.
@@ -33,13 +32,20 @@ class AI(BaseAI):
             str: The name of your Player.
         """
         # <<-- Creer-Merge: get-name -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
-        return "FlatEarthSquad" # REPLACE THIS WITH YOUR TEAM NAME
+        return "TheGlobalists" # REPLACE THIS WITH YOUR TEAM NAME
         # <<-- /Creer-Merge: get-name -->>
 
     def start(self):
         """ This is called once the game starts and your AI knows its player and
             game. You can initialize your AI here.
-        """
+        """ 
+        self._ourMiners = []
+        #Find our Miners
+        for i in self._game.units:
+            if i.owner == self._player:
+                self._ourMiners.append(i)
+        print(str(self._ourMiners))
+        
         # <<-- Creer-Merge: start -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # replace with your start logic
         # <<-- /Creer-Merge: start -->>
@@ -70,9 +76,13 @@ class AI(BaseAI):
         Returns:
             bool: Represents if you want to end your turn. True means end your turn, False means to keep your turn going and re-call this function.
         """
+        print(self._ourMiners[0].moves)
+        if self._ourMiners[0].moves :
+            self._ourMiners[0].move(self._ourMiners[0].x+self._ourMiners[0].moves, self._ourMiners[0].y)
+
+        
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
-        spawn(0,0,miner)
         return True
         # <<-- /Creer-Merge: runTurn -->>
 
