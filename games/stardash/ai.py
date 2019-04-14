@@ -1,9 +1,11 @@
 # This is where you build your AI for the Stardash game.
 
 from joueur.base_ai import BaseAI
+import math
 
 # <<-- Creer-Merge: imports -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
 # you can add additional import(s) here
+
 # <<-- /Creer-Merge: imports -->>
 
 class AI(BaseAI):
@@ -72,7 +74,54 @@ class AI(BaseAI):
         """
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
-        body.Body.spawn(0,0,"miner")
+
+        #assign target variable
+        target = self._player.home_base
+
+        #Parse Bodies
+        bodies = self._game.bodies
+        
+        for _ in bodies:
+            if self._target == None:
+                if _.body_type == "asteroid":
+                    if _.material_type == 'genarium':
+                        self._toMine = _
+
+        #Parse Units
+        #Can optimize movement with range
+        units = self._game.units
+        
+        for _ in units:
+            if _.owner == self._player:
+                if _.job.title == "miner":
+                    if _.genarium == 0 and _.rarium == 0 and _.legendarium == 0 and _.mythicite == 0:
+                        target = self._toMine
+                        if self._toMine.amount == 0:
+                            self._toMine = None
+                            target = self._player.home_base
+                            
+                    movX = (target.x - _.x)
+                        
+                    movY = (target.y - _.y)
+
+                    if math.fabs(movX) > _.moves:
+                        movX = math.copysign(_.moves, movX)
+                    if movX != 0.0:    
+                        _.move(_.x + movX, _.y)
+
+                    if math.fabs(movY) > _.moves:
+                        movY = math.copysign(_.moves, movY)
+
+                    if movY != 0.0: 
+                        _.move(_.x, _.y + movY)
+                        
+                    if _.x + _.job.range >= target.x and _.x - _.job.range <= target.x:
+                        if _.y + _.job.range >= target.y and _.y - _.job.range <= target.y:
+                            if target.body_type == "asteroid":
+                                _.mine(target)
+
+                    if _.genarium + _.rarium + _.legendarium + _.mythicite >= _.job.carry_limit:
+                        target = self._player.home_base
         return True
         # <<-- /Creer-Merge: runTurn -->>
 
