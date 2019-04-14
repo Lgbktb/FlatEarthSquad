@@ -113,6 +113,7 @@ class AI(BaseAI):
         """
         # <<-- Creer-Merge: runTurn -->> - Code you add between this comment and the end comment will be preserved between Creer re-runs.
         # Put your game logic here for runTurn
+        print("Turn start: "+ str(self._game.current_turn))
 
         #assign target variable
         target = self._player.home_base
@@ -123,20 +124,25 @@ class AI(BaseAI):
         
         for _ in bodies:
             if _.body_type == "asteroid":
-                if _.material_type == 'legendarium':
+                if _.material_type == 'mythicite':
                     if self._toMine == None:
                         self._toMine = _
-                    else:
-                        prior = self._toMine
+                    # else:
+                    #     prior = self._toMine
                         
                     if self._toMine != None:
-                        dist = self._player.home_base.x
-                        if dist - _.x < dist - self._toMine.x:
+                        #dist = self._player.home_base.x
+                        #Distance from the base to the astroid
+                        newdist = self.distance(_.x, _.y, self._player.home_base.x, self._player.home_base.y)
+                        olddist = self.distance(self._toMine.x, self._toMine.y, self._player.home_base.x, self._player.home_base.y)
+                        if newdist < olddist:
+                            self._toMine = _
+                        """if dist - _.x < dist - self._toMine.x:
                             if dist - _.y < dist - self._toMine.y:
                                 self._toMine = _
                             else:
                                 self._toMine = prior
-                            
+                        """
 
         #Parse Units
         #Can optimize movement with range
