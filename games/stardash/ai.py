@@ -124,10 +124,10 @@ class AI(BaseAI):
         
         for _ in bodies:
             if _.body_type == "asteroid":
-                if _.material_type == 'legendarium':
+                if _.amount != 0:
                     if self._toMine == None:
                         self._toMine = _
-                        
+                            
                     if self._toMine != None:
                         newdist = self.distance(_.x, _.y, self._player.home_base.x, self._player.home_base.y)
                         olddist = self.distance(self._toMine.x, self._toMine.y, self._player.home_base.x, self._player.home_base.y)
